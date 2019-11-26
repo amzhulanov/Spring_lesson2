@@ -1,0 +1,14 @@
+h1 {
+    color: #FF0000;
+}
+
+
+.catalog_table_head{
+    background-color: cornsilk;
+    font-size: larger;
+}
+
+.catalog_table{
+    border: 1px solid #212121;
+}
+

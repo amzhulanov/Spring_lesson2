@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Spring MVC GeekApp</title>
+</head>
+
+    <body>
+    <h1>Info page</h1>
+
+    <!--/*@thymesVar id="message" type="java.lang.String"*/-->
+    <!--/*@thymesVar id="product" type="com.geekbrains.entities.Product"*/-->
+
+    <span th:text="${message}" />
+    <br>
+    <span th:text="'Product title: ' + ${product.title}" />
+    </body>
+</html>

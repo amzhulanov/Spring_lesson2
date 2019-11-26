@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Spring MVC GeekApp</title>
+</head>
+
+<body>
+    <h1>Веб-приложение: Spring MVC GeekApp</h1>
+    <br>
+    <h4>Путеводитель</h4>
+    <br>
+    <a th:href="@{/show_simple_form}">Работа с простой формой</a>
+    <br>
+    <a th:href="@{/show_mod_form}">Работа с MOD формой</a>
+    <br>
+    <a th:href="@{/products/show}">Каталог продуктов</a>
+    <br>
+    <a th:href="@{/products/show_add_form}">Добавить новый продукт</a>
+    <br>
+    <a th:href="@{/show_search_form}">Поиск продукта</a>
+</body>
+</html>
