@@ -65,26 +65,12 @@ public class ProductController {
         model.addAttribute("products", products);
         return "all_products";
     }
-    // POST http://localhost:8189/app/products/search_product
-//    @PostMapping("/search_product")
-//    public String processSearchProduct(@ModelAttribute("product") Long id, Model model) {
-//        model.addAttribute("product",productService.findById(id));
-//        return "product_form_result";
-//    }
-
 
     // http://localhost:8189/app/products/product_form/1
-    @RequestMapping(path = "/product_form/{id}", method = RequestMethod.GET)
+
+    @GetMapping(path="/product_form")
     @ResponseBody
-    public Product searchProductById(@PathVariable Long id) {
-//        model.addAttribute("product",productService.findById(id));
-//        return "product_form_result";
-        return productService.findById(id).orElseThrow(() -> new RuntimeException());
-    }
-    // http://localhost:8189/app/products/info/1
-    @RequestMapping(path = "/info/{id}", method = RequestMethod.GET)
-    @ResponseBody
-    public Product getProductById(@PathVariable Long id) {
+    public Product searchProductById(@RequestParam (value="id")Long id) {
         return productService.findById(id).orElseThrow(() -> new RuntimeException());
     }
 
